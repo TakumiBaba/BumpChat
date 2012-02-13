@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<Button android:id="@+id/connect_button"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+	  android:text="Connect"
+	  android:onClick="onConnectButton"
+	  android:layout_alignParentTop="true" />
+	<RelativeLayout android:id="@+id/input_bar"
+    android:layout_width="fill_parent"
+	  android:layout_height="wrap_content"
+		android:gravity="bottom"
+		android:layout_alignParentBottom="true">
+		<Button android:id="@+id/send"
+		  android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Send"
+			android:onClick="sendChat"
+			android:layout_alignParentRight="true" />
+    <AutoCompleteTextView android:id="@+id/message"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textSize="18sp"
+      android:layout_toLeftOf="@id/send" />
+	</RelativeLayout>
+  <TextView android:id="@+id/chat"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_below="@id/connect_button"
+    android:layout_above="@id/input_bar" />
+</RelativeLayout>
